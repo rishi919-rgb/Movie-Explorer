@@ -1,12 +1,27 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-function Navbar({ favoriteCount }) {
+function Navbar({ summary }) {
   return (
-    <nav className="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/favorites">Favorites ({favoriteCount})</Link>
-      <Link to="/about">About</Link>
-    </nav>
+    <header className="site-header">
+      <div className="brand-block">
+        <p className="eyebrow">Streaming-style discovery</p>
+        <NavLink to="/" className="brand-mark">
+          Movie Explorer X
+        </NavLink>
+      </div>
+
+      <nav className="site-nav">
+        <NavLink to="/">Discover</NavLink>
+        <NavLink to="/favorites">Your Vault</NavLink>
+        <NavLink to="/about">About</NavLink>
+      </nav>
+
+      <div className="header-stats">
+        <span>{summary.favorites} favorites</span>
+        <span>{summary.watchlist} watchlist</span>
+        <span>{summary.watched} watched</span>
+      </div>
+    </header>
   )
 }
 

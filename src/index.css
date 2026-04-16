@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  font-family: 'Instrument Sans', sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255, 151, 84, 0.12), transparent 25%),
+    radial-gradient(circle at 20% 20%, rgba(80, 146, 255, 0.08), transparent 18%),
+    linear-gradient(180deg, #05070d 0%, #090d18 40%, #06080f 100%);
+  color: #fff7eb;
+}
 
 * {
   box-sizing: border-box;
@@ -12,22 +22,25 @@ body,
 
 body {
   margin: 0;
-  font-family: 'Manrope', 'Segoe UI', sans-serif;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(15, 23, 42, 0.08), transparent 38%),
-    radial-gradient(circle at 88% 10%, rgba(180, 83, 9, 0.09), transparent 36%),
-    linear-gradient(180deg, #f5f3ef 0%, #f1ece6 100%);
-  color: #1f2937;
+  min-height: 100vh;
   line-height: 1.55;
+  background:
+    radial-gradient(circle at top, rgba(255, 151, 84, 0.14), transparent 24%),
+    radial-gradient(circle at 80% 10%, rgba(63, 117, 255, 0.1), transparent 18%),
+    linear-gradient(180deg, #05070d 0%, #090d18 40%, #06080f 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
 }
 
 p {
   margin: 0;
-}
-
-h1,
-h2,
-h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  letter-spacing: 0.2px;
 }
